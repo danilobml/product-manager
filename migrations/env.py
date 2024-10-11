@@ -17,6 +17,9 @@ config = context.config
 
 config.set_section_option("devdb", 'sqlalchemy.url', os.getenv('DEV_DATABASE_URL'))
 
+config.set_section_option("testdb", 'sqlalchemy.url', os.getenv('TEST_DATABASE_URL'))
+
+
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
